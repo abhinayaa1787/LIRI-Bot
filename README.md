@@ -67,7 +67,7 @@ Before running the liri.js use terminal to install the above mentioned packages 
 
 #### If the user enters the following command in the terminal
 ```` node liri do-what-it says````
-######When the command runs, fs module runs to interact with a file system. There is a file that has as an input for the node-spotify-api module.The text in the file random.txt is read and the data relevant to the song in txt file is displayed
+###### When the command runs, fs module runs to interact with a file system. There is a file that has as an input for the node-spotify-api module.The text in the file random.txt is read and the data relevant to the song in txt file is displayed
 
 ##### The following will be the output
 ![Screenshot](/images/dowhatitsays.png)
