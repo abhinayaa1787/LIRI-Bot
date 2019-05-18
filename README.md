@@ -10,6 +10,19 @@
 * **movie-this** for searching data about a movie of users choice
 * **do-what-it-says** for spotifying the "I Want it That Way"song 
 
+### Node packages installed in this 
+* Axios
+* Moment
+* Dotenv
+* node-spotify-api
+
+### APIs used are 
+* OMDB
+* BandsinTown
+
+Before running the liri.js use terminal to install the above mentioned packages using the command ```` npm i ````
+
+
 #### If the user wants to search a song and  enters the following command in the terminal
 ```` node liri spotify-this-song````
 ##### The following will be the output
