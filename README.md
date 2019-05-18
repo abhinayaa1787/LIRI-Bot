@@ -59,7 +59,7 @@ Before running the liri.js use terminal to install the above mentioned packages 
 ![Screenshot](/images/concert_noname.png)
 
 #### If the user wants to know about the upcoming concerts about a band/artist and  enters the following command in the terminal
-```` - node liri concert-this ed sheeran````
+ `RGB[A](R, G, B[, A])` ````  node liri concert-this ed sheeran````
 ###### When this command runs, the axios package makes a call to the bandsintown API and fetches data corresponding to the user query
 
 ##### The following will be the output
