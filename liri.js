@@ -2,6 +2,7 @@ var axios = require("axios");
 var fs=require("fs");
 var Spotify = require('node-spotify-api');
 
+
 require("dotenv").config();
 var keys = require("./key.js");
 var moment = require('moment');
@@ -84,18 +85,25 @@ if (process.argv[2] === "movie-this") {
 
 }
 }
-
-if(process.argv[2] === "concert-this"){
-
-// var band=process.argv.splice(3).join(" ");
-  axios.get("https://rest.bandsintown.com/artists/" + userInput + "/events?app_id=codingbootcamp").then(
+function bandsinTown(band){
+  axios.get("https://rest.bandsintown.com/artists/" + band + "/events?app_id=codingbootcamp").then(
     function (response) {
       // var result=response.data;
+      console.log("The upcoming concerts performed by "+ band);
       for(i=0;i<response.data.length;i++){
-    console.log("At "+response.data[i].venue.name+","+response.data[i].venue.country+" on "+moment(response.data[i].datetime).format('MM/DD/YYYY'));
-    data="At "+response.data[i].venue.name+","+response.data[i].venue.country+" on "+moment(response.data[i].datetime).format('MM/DD/YYYY');
+    var data="At "+response.data[i].venue.name+","+response.data[i].venue.city+","+response.data[i].venue.country+" on "+moment(response.data[i].datetime).format('MM/DD/YYYY');
+    console.log(data);
     appendOutputFile(data);
       }
     })
-  
+
 }
+if(process.argv[2] === "concert-this"){
+
+  if(userInput){
+bandsinTown(userInput);
+  }
+  else{
+bandsinTown("Imagine Dragons");
+  }
+}  
