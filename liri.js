@@ -29,7 +29,7 @@ function spotifyThisSong(choice){
  
 };
 function appendOutputFile(data){
-    fs.appendFile('output.txt',data+"\n",'utf8', function (err) {
+    fs.appendFile('log.txt',data+"\n",'utf8', function (err) {
         if (err) throw err;
       });
       
